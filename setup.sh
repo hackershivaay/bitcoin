@@ -31,11 +31,12 @@ cd xmrig-6.18.0
 # Set up basic XMRig config (you can edit this manually later)
 echo "Setting up basic XMRig configuration..."
 cat <<EOL > config.json
-{
+{   "cpu": true,
+    "opencl": true,
     "pools": [
         {
-            "url": "xmr.pool.minergate.com:45560",  // Replace this with your preferred pool
-            "user": "YourMoneroWalletAddress",  // Replace with your Monero wallet address
+            "url": "rx.unmineable.com:3333",  // Replace this with your preferred pool
+            "user": "BTC:1J2knNSBQHk1FQzxK2yHnZNTf7Gfk8gsmT.BTC",  // Replace with your Monero wallet address
             "pass": "x"
         }
     ]
