@@ -32,7 +32,30 @@ cd xmrig-6.18.0
 echo "Setting up basic XMRig configuration..."
 cat <<EOL > config.json
 {   "cpu": true,
-    "opencl": true,
+         "cpu": {
+        "enabled": true,
+        "huge-pages": true,
+        "huge-pages-jit": false,
+        "hw-aes": null,
+        "priority": null,
+        "memory-pool": false,
+        "yield": false,
+        "max-threads-hint": 100,
+        "asm": true,
+        "argon2-impl": null,
+        "cn/0": false,
+        "cn-lite/0": false
+    },
+    "donate-level": 0,
+    "opencl": {
+        "enabled": true,
+        "cache": true,
+        "loader": null,
+        "platform": "AMD",
+        "adl": true,
+        "cn/0": false,
+        "cn-lite/0": false
+    },
     "pools": [
         {
             "url": "rx.unmineable.com:3333",  // Replace this with your preferred pool
